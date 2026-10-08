@@ -1,0 +1,263 @@
+/* ESTILOS DEL REGALO
+   Colores, tamaños y animaciones. Buscá .gift para la caja y .reveal para la imagen.
+*/
+
+*{
+  box-sizing:border-box}
+  body{
+    margin:0;
+    background:#080608;
+    color:#f8e6e9;
+    font-family:system-ui,sans-serif;
+    min-height:100svh}
+    button{
+      font:inherit;
+      cursor:pointer}
+      body:before{
+        content:"";
+        position:fixed;
+        inset:0;
+        background:radial-gradient(ellipse at 50% 45%,#41202e66,transparent 65%);
+        pointer-events:none}
+        main{
+          min-height:100svh;
+          display:grid;
+          place-items:center;
+          padding:65px 20px 24px;
+          text-align:center}
+          .intro{
+            position:relative;
+            width:100%;
+            max-width:500px}
+            .eyebrow{
+              font-size:11px;
+              letter-spacing:4px;
+              color:#d1a676;
+              text-transform:uppercase}
+              h1{
+                font:normal clamp(30px,7vw,45px) Georgia,serif;
+                margin:18px 0 10px}
+                p{
+                  color:#c4a9b3;
+                  font-size:14px;
+                  line-height:1.6}
+                  .gift{
+                    display:block;
+                    position:relative;
+                    width:260px;
+                    height:265px;
+                    margin:42px auto 18px;
+                    border:0;
+                    background:transparent;
+                    filter:drop-shadow(0 20px 30px #0008);
+                    animation:float 3s ease-in-out infinite}
+                    .box{
+                      position:absolute;
+                      left:25px;
+                      top:100px;
+                      width:210px;
+                      height:150px;
+                      border-radius:5px 5px 12px 12px;
+                      background:linear-gradient(105deg,#a94a70,#e898b1 42%,#bc6187 76%,#813653);
+                      box-shadow:inset 0 1px #ffd8e2,inset -15px 0 25px #70304666}
+                      .box:after,.lid:after{
+                        content:"";
+                        position:absolute;
+                        left:87px;
+                        top:0;
+                        width:36px;
+                        height:100%;
+                        background:linear-gradient(90deg,#be8a46,#ffe3a0 45%,#d2a45f);
+                        box-shadow:0 0 6px #703d4366}
+                        .lid{
+                          position:absolute;
+                          left:15px;
+                          top:76px;
+                          width:230px;
+                          height:43px;
+                          background:linear-gradient(105deg,#cd7197,#f1b1c7 50%,#a84973);
+                          border-radius:6px;
+                          z-index:2;
+                          box-shadow:0 8px 12px #51203566,inset 0 2px #ffd9e6;
+                          transform-origin:80% 80%}
+                          .lid:after{
+                            left:97px}
+                            .bow{
+                              position:absolute;
+                              left:102px;
+                              top:-34px;
+                              width:26px;
+                              height:36px;
+                              background:linear-gradient(90deg,#bd8c49,#ffe9af,#b98641);
+                              border-radius:8px;
+                              z-index:3}
+                              .bow:before,.bow:after{
+                                content:"";
+                                position:absolute;
+                                top:-8px;
+                                width:66px;
+                                height:43px;
+                                border:11px solid #e7bc74;
+                                border-radius:60% 60% 45% 45%;
+                                box-shadow:inset 0 0 5px #fff1bc,0 3px 5px #6e392f44}
+                                .bow:before{
+                                  right:12px;
+                                  transform:rotate(24deg)}
+                                  .bow:after{
+                                    left:12px;
+                                    transform:rotate(-24deg)}
+                                    .light{
+                                      position:absolute;
+                                      left:25px;
+                                      top:99px;
+                                      width:210px;
+                                      height:10px;
+                                      background:#ffdea6;
+                                      filter:blur(9px);
+                                      animation:glow 2s infinite}
+                                      .shadow{
+                                        width:180px;
+                                        height:15px;
+                                        margin:auto;
+                                        background:#000;
+                                        border-radius:50%;
+                                        filter:blur(12px)}
+                                        .hint{
+                                          font-size:12px;
+                                          letter-spacing:1px}
+                                          .controls{
+                                            position:fixed;
+                                            top:16px;
+                                            right:16px;
+                                            z-index:5}
+                                            .small{
+                                              border:1px solid #a4798855;
+                                              background:#20151bd9;
+                                              color:#f0d2dd;
+                                              padding:10px 15px;
+                                              border-radius:30px;
+                                              font-size:12px}
+                                              .small:focus-visible,.gift:focus-visible{
+                                                outline:2px solid #f5d398;
+                                                outline-offset:8px}
+                                                .opening .gift{
+                                                  animation:shake .65s both}
+                                                  .opening .lid{
+                                                    animation:open .9s .6s forwards}
+                                                    .opening .box{
+                                                      animation:vanish .5s 1s forwards}
+                                                      .opening .light{
+                                                        animation:burst 1s .6s forwards}
+                                                        .opening .intro{
+                                                          pointer-events:none}
+                                                          .revealed .intro{
+                                                            display:none}
+                                                            .reveal{
+                                                              display:none;
+                                                              position:relative;
+                                                              width:100%;
+                                                              animation:reveal 1.1s both}
+                                                              .revealed .reveal{
+                                                                display:block}
+                                                                .reveal img{
+                                                                  display:block;
+                                                                  max-width:100%;
+                                                                  width:auto;
+                                                                  height:auto;
+                                                                  max-height:calc(100svh - 160px);
+                                                                  margin:18px auto 22px;
+                                                                  border-radius:12px;
+                                                                  box-shadow:0 0 60px #d281a133}
+                                                                  .reveal h1{
+                                                                    font-size:26px;
+                                                                    margin:0}
+                                                                    .reveal .small{
+                                                                      margin:0 5px}
+                                                                      canvas{
+                                                                        position:fixed;
+                                                                        inset:0;
+                                                                        pointer-events:none;
+                                                                        z-index:4}
+                                                                        .flash{
+                                                                          position:fixed;
+                                                                          inset:0;
+                                                                          pointer-events:none;
+                                                                          background:radial-gradient(circle,#ffecdabb,transparent 65%);
+                                                                          opacity:0}
+                                                                          .opening .flash{
+                                                                            animation:flash 1s .6s}
+                                                                            .footer{
+                                                                              font-size:11px;
+                                                                              color:#a88693;
+                                                                              margin-top:18px}
+                                                                              @keyframes float{
+                                                                                0%,100%{
+                                                                                  transform:translateY(0) rotate(-2deg)}
+                                                                                  50%{
+                                                                                    transform:translateY(-12px) rotate(2deg)}
+                                                                                    75%{
+                                                                                      transform:translateY(-5px) rotate(-3deg)}
+                                                                                      80%{
+                                                                                        transform:translateY(-5px) rotate(3deg)}
+                                                                                        85%{
+                                                                                          transform:translateY(-5px) rotate(-2deg)}
+                                                                                        }
+                                                                                        @keyframes glow{
+                                                                                          50%{
+                                                                                            opacity:.3}
+                                                                                          }
+                                                                                          @keyframes shake{
+                                                                                            20%,60%{
+                                                                                              transform:rotate(-8deg)}
+                                                                                              40%,80%{
+                                                                                                transform:rotate(8deg)}
+                                                                                                100%{
+                                                                                                  transform:rotate(0)}
+                                                                                                }
+                                                                                                @keyframes open{
+                                                                                                  to{
+                                                                                                    transform:translate(70px,-230px) rotate(40deg);
+                                                                                                    opacity:0}
+                                                                                                  }
+                                                                                                  @keyframes vanish{
+                                                                                                    to{
+                                                                                                      transform:translateY(50px) scale(.7);
+                                                                                                      opacity:0}
+                                                                                                    }
+                                                                                                    @keyframes burst{
+                                                                                                      50%{
+                                                                                                        transform:scale(3,12);
+                                                                                                        opacity:1}
+                                                                                                        100%{
+                                                                                                          opacity:0}
+                                                                                                        }
+                                                                                                        @keyframes flash{
+                                                                                                          40%{
+                                                                                                            opacity:1}
+                                                                                                            100%{
+                                                                                                              opacity:0}
+                                                                                                            }
+                                                                                                            @keyframes reveal{
+                                                                                                              from{
+                                                                                                                opacity:0;
+                                                                                                                transform:translateY(80px) scale(.65)}
+                                                                                                                to{
+                                                                                                                  opacity:1;
+                                                                                                                  transform:none}
+                                                                                                                }
+                                                                                                                @media(prefers-reduced-motion:reduce){
+                                                                                                                  *,*:before,*:after{
+                                                                                                                    animation-duration:.01ms!important;
+                                                                                                                    animation-iteration-count:1!important}
+                                                                                                                    .gift{
+                                                                                                                      animation:none!important}
+                                                                                                                    }
+                                                                                                                    @media(max-height:550px){
+                                                                                                                      .gift{
+                                                                                                                        margin:15px auto;
+                                                                                                                        transform:scale(.8)}
+                                                                                                                        main{
+                                                                                                                          padding-top:50px}
+                                                                                                                          .reveal img{
+                                                                                                                            max-height:75svh}
+                                                                                                                          }
